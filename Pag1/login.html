@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="stylelogin.css">
+</head>
+<body class="contenedor">
+    <header>
+
+    </header>
+    <h1>Login</h1>
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="formulario">
+        <label for="usuario">Usuario (Correo electrónico):</label>
+        <input type="text" id="usuario" name="usuario" required>
+        <br>
+        <label for="contraseña">Contraseña:</label>
+        <input type="password" id="contraseña" name="contraseña" required>
+        <br>
+        <br>
+        <input type="submit" value="Iniciar sesión" class="button">
+    </form>
+</body>
+</html>

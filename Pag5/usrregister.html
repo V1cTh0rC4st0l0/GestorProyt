@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../Pag1/Estilos/stylelogin.css">
+  <title>Registro de Usuario</title>
+</head>
+<body>
+  <form class="formulario" action="process_registration.php" method="post">  <h1>Registrate</h1>
+    <div class="contenedor">
+
+      <div class="input-contenedor">
+        <i class="fas fa-user icon"></i>
+        <input type="text" name="nombre" placeholder="Nombre ">
+      </div>
+
+      <div class="input-contenedor">
+        <i class="fas fa-user"></i>
+        <input type="text" name="apellido_paterno" placeholder="Apellido Paterno">
+      </div>
+
+      <div class="input-contenedor">
+        <i class="fas fa-user"></i>
+        <input type="text" name="apellido_materno" placeholder="Apellido Materno">
+      </div>
+
+      <div class="input-contenedor">
+        <i class="fas fa-envelope icon"></i>
+        <input type="email" name="email" placeholder="Correo Electronico">
+      </div>
+
+      <div class="input-contenedor">
+        <i class="fas fa-key icon"></i>
+        <input type="password" name="password" placeholder="Contraseña">
+      </div>
+
+      <input type="submit" value="Registrate" class="button">
+      <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
+      <p>¿Ya tienes una cuenta?<a class="link" href="../Pag1/login.html">Iniciar Sesion</a></p>
+    </div>
+  </form>
+</body>
+</html>

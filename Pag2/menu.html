@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Menu Principal Admin</h1>
+  <div class="contenedor">
+    <div class="div1">
+      <h2>Agregar nuevo proyecto</h2>
+      <a href="../Pag3/newproyect.html" class="btn">Nuevo Proyecto</a>
+    </div>
+      <div class="div2">
+          <h2>Proyectos</h2>
+          <form action="" method="post">
+            <label for="campo">Buscar: </label>
+            <input type="text" name="campo" id="campo">
+          </form>
+      <table>
+        <thead>
+          <th>id</th>
+          <th>Nombre</th>
+          <th>Descripcion</th>
+          <th>Fecha de inicio</th>
+          <th>Fecha final</th>
+          <th>Objetivo general</th>
+          <th>Objetivos especificos</th>
+        </thead>
+        
+        <tbody id="content">
+          <!-- Aquí se insertarán las filas de datos -->
+        </tbody>
+      </table>
+  
+    <script src="script.js"></script>
+      </div>
+  </div>    
+</body>
+</html>

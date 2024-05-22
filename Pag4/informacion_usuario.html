@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mostrar datos desde PHP</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        // Llamando a la función getData() al cargar la página
+        document.addEventListener("DOMContentLoaded", getData);
+ 
+        document.getElementById("campo").addEventListener("keyup",getData)
+        // Función para obtener datos con AJAX
+        function getData() {
+            let input = document.getElementById("campo").value
+            let content = document.getElementById("content")
+            let url= "prep.php"
+
+            let formaData = new FormData()
+            formaData.append('campo', input)
+            
+
+            fetch("prep.php", {
+                    method: "POST",
+                    body: formaData,
+                    headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    content.innerHTML = data
+                })
+                .catch(err => console.log(err))
+        }
+    </script>
+</head>
+<body>
+    <h1>Mostrar datos desde PHP</h1>
+    <label for="campo">Buscar: </label>
+    <input type="text" name="campo" id="campo">
+
+    <div id="content"></div> </body>
+
+</html>
